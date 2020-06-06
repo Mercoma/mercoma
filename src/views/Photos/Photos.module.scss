@@ -4,6 +4,10 @@
   height: 100vh;
   overflow: hidden;
 
+  #placementCardModal {
+    z-index: 3;
+  }
+
   .photosContent {
     padding: 1rem 1.5rem;
     overflow: scroll;

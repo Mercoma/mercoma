@@ -5,13 +5,18 @@ import styles from "./PhotoCard.module.scss";
 
 PhotoCard.propTypes = {
   isPlacementCard: PropTypes.bool.isRequired,
+  onClick: PropTypes.func,
   photo: PropTypes.object,
 };
 
 export default function PhotoCard(props) {
   if (props.isPlacementCard) {
     return (
-      <div id={styles.placementCard} className={styles.photoCard}>
+      <div
+        id={styles.placementCard}
+        className={styles.photoCard}
+        onClick={props.onClick}
+      >
         <i className="fas fa-plus fa-4x" />
       </div>
     );
