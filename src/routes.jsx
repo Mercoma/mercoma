@@ -14,8 +14,8 @@ export default function AppRouter() {
       <Switch>
         <Route exact path="/login" component={Login} />
         <Route path="/signUp" component={SignUp} />
-        <PrivateRoute path="/dashboard" component={Dashboard} />
         <PrivateRoute path="/dashboard/photos" component={Photos} />
+        <PrivateRoute path="/dashboard" component={Dashboard} />
         <PrivateRoute component={NotFound} />
       </Switch>
     </Router>

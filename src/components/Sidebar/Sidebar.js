@@ -37,12 +37,12 @@ function Sidebar(props) {
       </div>
       <div className={styles.navigationItems}>
         <div>
-          <Link className={styles.navigationLink} to="/">
+          <Link className={styles.navigationLink} to="/dashboard">
             Dashboard
           </Link>
         </div>
         <div>
-          <Link className={styles.navigationLink} to="/photos">
+          <Link className={styles.navigationLink} to="/dashboard/photos">
             Photos
           </Link>
         </div>

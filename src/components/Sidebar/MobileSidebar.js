@@ -7,19 +7,19 @@ export default function MobileSidebar() {
   return (
     <div className={styles.mobileSidebar}>
       <ul className={styles.navigationItems}>
-        <Link to="/photos">
+        <Link to="/dashboard/photos">
           <div className={styles.navigationLink}>
             <i className="fas fa-camera fa-2x"></i>
             Photos
           </div>
         </Link>
-        <Link to="/">
+        <Link to="/dashboard">
           <div className={styles.navigationLink}>
             <i className="fas fa-tachometer-alt fa-2x"></i>
             Dashboard
           </div>
         </Link>
-        <Link to="/profile">
+        <Link to="/dashboard/profile">
           <div className={styles.navigationLink}>
             <i className="fas fa-user fa-2x"></i>
             Profile

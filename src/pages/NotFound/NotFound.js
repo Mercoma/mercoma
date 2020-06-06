@@ -15,7 +15,7 @@ export default function NotFound() {
         <h1>
           The page you navigated to does not exist.
           <div>
-            <Link className={styles.notFoundReturnLink} to="/">
+            <Link className={styles.notFoundReturnLink} to="/dashboard">
               Return to dashboard
             </Link>
           </div>
