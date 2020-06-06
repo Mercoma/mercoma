@@ -22,12 +22,11 @@ export default function Sidebar(props) {
     setFullName(`${user1.firstName} ${user1.lastName}`);
     setAvatar(user1.avatar);
 
+    // TODO: Add indicator of which page is selected
     switch (props.page) {
       case "dashboard":
-        console.log("Dashboard loaded");
         break;
       case "photos":
-        console.log("Photos loaded");
         break;
       default:
         break;

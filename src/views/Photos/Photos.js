@@ -9,7 +9,6 @@ import styles from "./Photos.module.scss";
 export default function Photos() {
   useEffect(() => {
     document.title = "Mercoma - Photos";
-    console.log(user1.photos);
   }, []);
 
   return (
