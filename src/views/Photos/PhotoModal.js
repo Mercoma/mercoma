@@ -48,7 +48,11 @@ function PhotoModal(props) {
             {isFileAdded ? (
               <>
                 <p className="image is-4by3">
-                  <img src={image} alt="Uploaded skin sample" />
+                  <img
+                    id={styles.addedImage}
+                    src={image}
+                    alt="Uploaded skin sample"
+                  />
                 </p>
               </>
             ) : (
