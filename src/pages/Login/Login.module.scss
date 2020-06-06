@@ -1,0 +1,76 @@
+@import "../../scss/shared";
+
+.login {
+  text-align: center;
+
+  h1 {
+    font-size: 60px;
+    font-weight: 500;
+    margin: 3rem;
+  }
+
+  h2 {
+    font-size: 26px;
+    font-weight: 800;
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .formContainer {
+    width: 400px;
+
+    .inputContainer {
+      display: flex;
+      margin: 16px 0;
+
+      input {
+        background-color: #f7f7f7;
+        border: none;
+        border-radius: 5px;
+        height: 35px;
+        width: 100%;
+        font-size: 16px;
+        box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.2);
+        -webkit-appearance: none;
+        padding-left: 8px;
+
+        &::placeholder {
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    button {
+      background-color: $ocean-blue;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      height: 35px;
+      width: 100%;
+      font-size: 20px;
+      font-weight: bold;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      margin: 0 16px;
+    }
+  }
+
+  .navigationLink {
+    color: $ocean-blue;
+    font-weight: 600;
+    padding-left: 8px;
+  }
+
+  #signUpSection {
+    margin-top: 16px;
+  }
+}
