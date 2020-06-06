@@ -1,0 +1,21 @@
+.sidebar {
+  background-color: #02B0C8;
+  color: white;
+  padding: 1em;
+
+  .profileCard {
+    align-items: center;
+    display: flex;
+
+    img {
+      border-radius: 30px;
+      width: 60px;
+      height: 60px;
+    }
+
+    h1 {
+      font-weight: bold;
+      padding-left: 0.5rem;
+    }
+  }
+}

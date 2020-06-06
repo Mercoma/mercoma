@@ -1,0 +1,14 @@
+.dashboard {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  height: 100vh;
+
+  .dashboardContent {
+    padding: 1rem 1.5rem;
+
+    h1 {
+      font-size: 40px;
+      font-weight: 500;
+    }
+  }
+}
