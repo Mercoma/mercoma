@@ -1,0 +1,14 @@
+.photoCard {
+  background-color: #E8E6E6;
+  border-radius: 10px;
+  padding: 100px 0;
+  text-align: center;
+
+  #photoPlacement {
+    visibility: hidden;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}

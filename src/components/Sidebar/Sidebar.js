@@ -34,7 +34,7 @@ export default function Sidebar(props) {
 
   return (
     <div className={styles.sidebar}>
-      {/* Fetch image from server */}
+      {/* TODO: Fetch image from server */}
       <div className={styles.profileCard}>
         <img src={profileImage} alt="Profile" />
         <p>{fullName}</p>

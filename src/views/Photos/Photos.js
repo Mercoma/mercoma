@@ -1,5 +1,6 @@
 import React from "react";
 
+import PhotoCard from "./PhotoCard";
 import Sidebar from "../../components/Sidebar";
 
 import styles from "./Photos.module.scss";
@@ -10,7 +11,23 @@ export default function Photos() {
       <Sidebar page="photos" />
       <section className={styles.photosContent}>
         <h1>Photos</h1>
-        <button className="button is-primary">Button</button>
+        <div className={styles.photoGrid}>
+          <PhotoCard isPlacementCard />
+          {/* TODO: Create loop for the fetched images */}
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+          <PhotoCard isPlacementCard={false} />
+        </div>
       </section>
     </div>
   );
