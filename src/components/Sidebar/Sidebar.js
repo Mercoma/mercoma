@@ -36,7 +36,7 @@ export default function Sidebar(props) {
   return (
     <div className={styles.sidebar}>
       <div className={styles.profileCard}>
-        <img src={avatar} alt="Profile" />
+        <img src={avatar} alt="Avatar" />
         <p>{fullName}</p>
       </div>
       <div className={styles.navigationItems}>
