@@ -1,14 +1,17 @@
-.dashboard {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  height: 100vh;
+@import "../../scss/shared";
 
+.dashboardContent {
+  padding: 1rem 1.5rem;
+
+  h1 {
+    font-size: 40px;
+    font-weight: 500;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
   .dashboardContent {
-    padding: 1rem 1.5rem;
-
-    h1 {
-      font-size: 40px;
-      font-weight: 500;
-    }
+    // Accommodates the tab bar on mobile devices
+    padding-bottom: 6.2rem;
   }
 }

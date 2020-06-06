@@ -1,0 +1,14 @@
+@import "../../scss/shared";
+
+.base {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .base {
+    grid-template-columns: 1fr;
+  }
+}

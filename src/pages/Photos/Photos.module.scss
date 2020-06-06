@@ -1,35 +1,25 @@
 @import "../../scss/shared";
 
-.photos {
-  display: grid;
-  grid-template-columns: 220px 1fr;
-  height: 100vh;
-  overflow: hidden;
+.photosContent {
+  padding: 1rem 1.5rem;
+  overflow: scroll;
 
-  .photosContent {
-    padding: 1rem 1.5rem;
-    overflow: scroll;
+  h1 {
+    font-size: 40px;
+    font-weight: 500;
+  }
 
-    h1 {
-      font-size: 40px;
-      font-weight: 500;
-    }
-
-    .photoGrid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin: 1rem 0;
-    }
+  .photoGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin: 1rem 0;
   }
 }
 
 @media (max-width: $mobile-breakpoint) {
-  .photos {
-    grid-template-columns: 1fr;
-
-    .photosContent {
-      padding-bottom: 6.2rem;
-    }
+  .photosContent {
+    // Accommodates the tab bar on mobile devices
+    padding-bottom: 6.2rem;
   }
 }

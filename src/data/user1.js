@@ -26,5 +26,53 @@ export const user1 = {
       image: fourthImage,
       tumorPercent: 0.3291,
     },
+    {
+      image: firstImage,
+      tumorPercent: 0.5203,
+    },
+    {
+      image: secondImage,
+      tumorPercent: 0.2201,
+    },
+    {
+      image: thirdImage,
+      tumorPercent: 0.7203,
+    },
+    {
+      image: fourthImage,
+      tumorPercent: 0.3291,
+    },
+    {
+      image: firstImage,
+      tumorPercent: 0.5203,
+    },
+    {
+      image: secondImage,
+      tumorPercent: 0.2201,
+    },
+    {
+      image: thirdImage,
+      tumorPercent: 0.7203,
+    },
+    {
+      image: fourthImage,
+      tumorPercent: 0.3291,
+    },
+    {
+      image: firstImage,
+      tumorPercent: 0.5203,
+    },
+    {
+      image: secondImage,
+      tumorPercent: 0.2201,
+    },
+    {
+      image: thirdImage,
+      tumorPercent: 0.7203,
+    },
+    {
+      image: fourthImage,
+      tumorPercent: 0.3291,
+    },
   ],
 };

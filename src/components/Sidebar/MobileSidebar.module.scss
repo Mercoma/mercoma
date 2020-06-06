@@ -25,7 +25,7 @@
   }
 }
 
-@media (min-width: $mobile-breakpoint + 1px) {
+@media (min-width: $mobile-breakpoint) {
   .mobileSidebar {
     display: none;
   }
