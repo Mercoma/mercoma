@@ -3,13 +3,7 @@ import React from "react";
 
 import styles from "./PhotoCard.module.scss";
 
-PhotoCard.propTypes = {
-  isPlacementCard: PropTypes.bool.isRequired,
-  onClick: PropTypes.func,
-  photo: PropTypes.object,
-};
-
-export default function PhotoCard(props) {
+function PhotoCard(props) {
   if (props.isPlacementCard) {
     return (
       <div
@@ -37,3 +31,17 @@ export default function PhotoCard(props) {
     );
   }
 }
+
+PhotoCard.propTypes = {
+  isPlacementCard: PropTypes.bool.isRequired,
+  onClick: PropTypes.func,
+  photo: PropTypes.object,
+};
+
+PhotoCard.defaultProps = {
+  isPlacementCard: false,
+  onClick: null,
+  photo: null,
+};
+
+export default PhotoCard;

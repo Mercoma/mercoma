@@ -5,11 +5,7 @@ import { Link } from "react-router-dom";
 import { user1 } from "../../data/user1";
 import styles from "./Sidebar.module.scss";
 
-Sidebar.propTypes = {
-  page: PropTypes.string.isRequired,
-};
-
-export default function Sidebar(props) {
+function Sidebar(props) {
   const [avatar, setAvatar] = useState(null);
   const [fullName, setFullName] = useState("");
 
@@ -54,3 +50,13 @@ export default function Sidebar(props) {
     </div>
   );
 }
+
+Sidebar.propTypes = {
+  page: PropTypes.string.isRequired,
+};
+
+Sidebar.defaultProps = {
+  page: "dashboard",
+};
+
+export default Sidebar;

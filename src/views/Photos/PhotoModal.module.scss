@@ -1,0 +1,26 @@
+#modalCardBody {
+  text-align: center;
+
+  .inputfile {
+    width: 0.1vh;
+    height: 0.1vh;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+
+  .inputfile + label {
+    cursor: pointer;
+  }
+
+  .inputLabel {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  #emptyFileContent {
+    padding: 20% 0;
+  }
+}
