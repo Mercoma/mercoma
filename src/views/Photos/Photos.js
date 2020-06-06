@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import PhotoCard from "./PhotoCard";
 import Sidebar from "../../components/Sidebar";
@@ -6,6 +6,10 @@ import Sidebar from "../../components/Sidebar";
 import styles from "./Photos.module.scss";
 
 export default function Photos() {
+  useEffect(() => {
+    document.title = "Mercoma - Photos";
+  }, []);
+
   return (
     <div className={styles.photos}>
       <Sidebar page="photos" />

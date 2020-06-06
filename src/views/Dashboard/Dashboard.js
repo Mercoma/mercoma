@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import Sidebar from "../../components/Sidebar";
 
 import styles from "./Dashboard.module.scss";
 
 export default function Dashboard() {
+  useEffect(() => {
+    document.title = "Mercoma - Dashboard"
+  }, []);
+
   return (
     <div className={styles.dashboard}>
       <Sidebar page="dashboard" />
