@@ -10,7 +10,7 @@ Sidebar.propTypes = {
 };
 
 export default function Sidebar(props) {
-  const [avatar, setAvatar] = useState(undefined);
+  const [avatar, setAvatar] = useState(null);
   const [fullName, setFullName] = useState("");
 
   useEffect(() => {

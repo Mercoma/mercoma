@@ -11,18 +11,23 @@ PhotoCard.propTypes = {
 export default function PhotoCard(props) {
   if (props.isPlacementCard) {
     return (
-      <div className={styles.photoCard}>
+      <div id={styles.placementCard} className={styles.photoCard}>
         <i className="fas fa-plus fa-4x" />
       </div>
     );
   } else {
     return (
-      <div className={styles.photoCard}>
-        <img
-          className={styles.photoCardImage}
-          src={props.photo}
-          alt="Skin sample"
-        />
+      <div className={`card ${styles.photoCard}`}>
+        <div className="card-image">
+          <figure className="image is-4by3">
+            <img src={props.photo.image} alt="Skin sample" />
+          </figure>
+        </div>
+        <div className="card-content">
+          <div className="content">
+            <p>Tumor percent: {props.photo.tumorPercent}</p>
+          </div>
+        </div>
       </div>
     );
   }
