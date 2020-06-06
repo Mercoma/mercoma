@@ -5,6 +5,7 @@ import styles from "./PhotoCard.module.scss";
 
 PhotoCard.propTypes = {
   isPlacementCard: PropTypes.bool.isRequired,
+  photo: PropTypes.object,
 };
 
 export default function PhotoCard(props) {
@@ -17,8 +18,11 @@ export default function PhotoCard(props) {
   } else {
     return (
       <div className={styles.photoCard}>
-        {/* TODO: Replace comment with image data */}
-        <i id={styles.photoPlacement} className="fas fa-plus fa-4x" />
+        <img
+          className={styles.photoCardImage}
+          src={props.photo}
+          alt="Skin sample"
+        />
       </div>
     );
   }

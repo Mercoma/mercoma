@@ -4,7 +4,7 @@ import thirdImage from "../assets/fur3.jpeg";
 import fourthImage from "../assets/fur4.jpeg";
 import profilePicture from "../assets/profile.jpeg";
 
-export const user = {
+export const user1 = {
   firstName: "Jerry",
   lastName: "Turcios",
   email: "jerryturcios08@gmail.com",
@@ -12,19 +12,19 @@ export const user = {
   photos: [
     {
       image: firstImage,
-      tumorPercent: 0.5,
+      tumorPercent: 0.5203,
     },
     {
       image: secondImage,
-      tumorPercent: 0.5,
+      tumorPercent: 0.2201,
     },
     {
       image: thirdImage,
-      tumorPercent: 0.5,
+      tumorPercent: 0.7203,
     },
     {
       image: fourthImage,
-      tumorPercent: 0.5,
+      tumorPercent: 0.3291,
     },
   ],
 };

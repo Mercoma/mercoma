@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import profileImage from "../../assets/profile.jpeg";
+import { user1 } from "../../data/user1";
 import styles from "./Sidebar.module.scss";
 
 Sidebar.propTypes = {
@@ -10,6 +10,7 @@ Sidebar.propTypes = {
 };
 
 export default function Sidebar(props) {
+  const [avatar, setAvatar] = useState(undefined);
   const [fullName, setFullName] = useState("");
 
   useEffect(() => {
@@ -18,7 +19,8 @@ export default function Sidebar(props) {
 
   function configureComponent() {
     // TODO: API call to be implemented later
-    setFullName("Jerry Turcios")
+    setFullName(`${user1.firstName} ${user1.lastName}`);
+    setAvatar(user1.avatar);
 
     switch (props.page) {
       case "dashboard":
@@ -34,9 +36,8 @@ export default function Sidebar(props) {
 
   return (
     <div className={styles.sidebar}>
-      {/* TODO: Fetch image from server */}
       <div className={styles.profileCard}>
-        <img src={profileImage} alt="Profile" />
+        <img src={avatar} alt="Profile" />
         <p>{fullName}</p>
       </div>
       <div className={styles.navigationItems}>

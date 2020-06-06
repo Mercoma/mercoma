@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 
-import PhotoCard from "./PhotoCard";
 import Sidebar from "../../components/Sidebar";
+import { user1 } from "../../data/user1";
+import PhotoCard from "./PhotoCard";
 
 import styles from "./Photos.module.scss";
 
 export default function Photos() {
   useEffect(() => {
     document.title = "Mercoma - Photos";
+    console.log(user1.photos);
   }, []);
 
   return (
@@ -17,20 +19,9 @@ export default function Photos() {
         <h1>Photos</h1>
         <div className={styles.photoGrid}>
           <PhotoCard isPlacementCard />
-          {/* TODO: Create loop for the fetched images */}
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
-          <PhotoCard isPlacementCard={false} />
+          {user1.photos.map((photo, index) => (
+            <PhotoCard key={index} isPlacementCard={false} photo={photo} />
+          ))}
         </div>
       </section>
     </div>
