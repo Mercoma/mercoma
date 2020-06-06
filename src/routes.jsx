@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-import Dashboard from './views/Dashboard';
-import NotFound from "./views/NotFound/NotFound";
-import Photos from './views/Photos';
+import Dashboard from './pages/Dashboard';
+import NotFound from "./pages/NotFound/NotFound";
+import Photos from './pages/Photos';
 
 export default function AppRouter() {
   return (
