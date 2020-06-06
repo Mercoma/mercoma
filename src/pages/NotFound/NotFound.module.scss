@@ -1,3 +1,17 @@
+.notFoundContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  font-size: 30px;
+  padding: 2rem;
+  text-align: center;
+
+  .notFoundReturnLink {
+    font-weight: 600;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .notFoundContent {
     margin-bottom: 6.25rem;

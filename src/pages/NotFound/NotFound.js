@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom'
+import { Link } from "react-router-dom";
 
 import { MobileSidebar, Sidebar } from "../../components/Sidebar";
 import Base from "../../layout/Base";
@@ -13,7 +13,12 @@ export default function NotFound() {
       <MobileSidebar />
       <section className={styles.notFoundContent}>
         <h1>
-          The page you navigated to does not exist. <Link to="/">Return to dashboard</Link>
+          The page you navigated to does not exist.
+          <div>
+            <Link className={styles.notFoundReturnLink} to="/">
+              Return to dashboard
+            </Link>
+          </div>
         </h1>
       </section>
     </Base>
