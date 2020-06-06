@@ -1,22 +1,48 @@
+import axios from "axios";
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { BASE_URL } from "../../constants";
+
 import styles from "./Login.module.scss";
 
-export default function Login() {
+function Login(props) {
   const [emailInput, setEmailInput] = useState("");
   const [passwordInput, setPasswordInput] = useState("");
+  const [isRequestErrorVisible, setIsRequestErrorVisible] = useState(false);
 
   function handleEmailInputChange(e) {
     setEmailInput(e.target.value);
+    hideErrorStatusMessages();
   }
 
   function handlePasswordInputChange(e) {
     setPasswordInput(e.target.value);
+    hideErrorStatusMessages();
+  }
+
+  function hideErrorStatusMessages() {
+    setIsRequestErrorVisible(false);
   }
 
   function handleFormSubmission(e) {
     e.preventDefault();
+
+    const data = {
+      email: emailInput,
+      password: passwordInput,
+    };
+
+    axios
+      .post(`${BASE_URL}/users/signin`, data)
+      .then(() => {
+        // TODO: Add token to local storage and redirect to the dashboard
+        props.history.push("/dashboard");
+      })
+      .catch(() => {
+        setIsRequestErrorVisible(true);
+      });
   }
 
   return (
@@ -45,6 +71,16 @@ export default function Login() {
           </div>
           <button>Submit</button>
         </form>
+        {/* Status messages */}
+        {isRequestErrorVisible && (
+          <div className={`notification is-danger ${styles.statusMessage}`}>
+            <button
+              className="delete"
+              onClick={hideErrorStatusMessages}
+            ></button>
+            Error! The account was not found. Re-enter your email or password.
+          </div>
+        )}
       </div>
       <div id={styles.signUpSection}>
         <p>
@@ -57,3 +93,9 @@ export default function Login() {
     </div>
   );
 }
+
+Login.propTypes = {
+  history: PropTypes.object,
+};
+
+export default Login;

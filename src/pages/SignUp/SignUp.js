@@ -1,4 +1,5 @@
 import axios from "axios";
+import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
@@ -6,7 +7,7 @@ import { BASE_URL } from "../../constants";
 
 import styles from "./SignUp.module.scss";
 
-export default function SignUp(props) {
+function SignUp(props) {
   const [firstNameInput, setFirstNameInput] = useState("");
   const [lastNameInput, setLastNameInput] = useState("");
   const [emailInput, setEmailInput] = useState("");
@@ -59,8 +60,8 @@ export default function SignUp(props) {
       axios
         .post(`${BASE_URL}/users/signup`, data)
         .then((res) => {
-          // store token
-          props.history.push("/login")
+          // TODO: Decide to navigate to login or dashboard (auth token needed)
+          props.history.push("/login");
         })
         .catch(() => {
           setIsRequestErrorVisible(true);
@@ -146,3 +147,9 @@ export default function SignUp(props) {
     </div>
   );
 }
+
+SignUp.propTypes = {
+  history: PropTypes.object,
+};
+
+export default SignUp;
