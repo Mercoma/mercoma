@@ -9,6 +9,7 @@
   .container {
     display: flex;
     justify-content: center;
+    align-items: center;
 
     .formContainer {
       text-align: center;
@@ -16,7 +17,7 @@
 
       h1 {
         font-size: 40px;
-        margin-top: 5rem;
+        margin-top: 2rem;
       }
 
       p {
@@ -60,10 +61,17 @@
           cursor: pointer;
         }
       }
+    }
 
-      @media (max-width: $mobile-breakpoint) {
-        margin: 0 16px;
-      }
+    .statusMessage {
+      position: absolute;
+      margin-bottom: 8px;
+      width: 400px;
+      bottom: 0;
+    }
+
+    @media (max-width: $mobile-breakpoint) {
+      margin: 0 16px;
     }
   }
 }
