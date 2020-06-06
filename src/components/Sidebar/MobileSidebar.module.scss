@@ -1,0 +1,23 @@
+.mobileSidebar {
+  background-color: #02b0c8;
+  padding: 0.5rem 0;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  .navigationItems {
+    display: flex;
+    justify-content: space-evenly;
+
+    .navigationLink {
+      display: flex;
+      flex-direction: column;
+      color: white;
+
+      svg {
+        margin: auto;
+      }
+    }
+  }
+}

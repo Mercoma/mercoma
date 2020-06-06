@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Sidebar from "../../components/Sidebar";
+import { Sidebar } from "../../components/Sidebar";
 import { user1 } from "../../data/user1";
 import PhotoCard from "./PhotoCard";
 import PhotoModal from "./PhotoModal";

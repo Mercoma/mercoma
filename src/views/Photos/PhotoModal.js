@@ -28,7 +28,7 @@ function PhotoModal(props) {
   function handleFormSubmit(e) {
     e.preventDefault();
 
-    const files = imageInputRef.files;
+    // const files = imageInputRef.files;
   }
 
   return (

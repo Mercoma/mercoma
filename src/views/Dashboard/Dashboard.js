@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-import Sidebar from "../../components/Sidebar";
+import { Sidebar } from "../../components/Sidebar";
 
 import styles from "./Dashboard.module.scss";
 
