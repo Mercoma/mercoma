@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import profileImage from "../../assets/profile.jpeg";
 import styles from "./Sidebar.module.scss";
@@ -9,16 +10,22 @@ Sidebar.propTypes = {
 };
 
 export default function Sidebar(props) {
-  const [fullName, setFullName] = useState("Doge McDoodle");
+  const [fullName, setFullName] = useState("");
 
   useEffect(() => {
     configureComponent();
   });
 
   function configureComponent() {
+    // TODO: API call to be implemented later
+    setFullName("Jerry Turcios")
+
     switch (props.page) {
       case "dashboard":
         console.log("Dashboard loaded");
+        break;
+      case "photos":
+        console.log("Photos loaded");
         break;
       default:
         break;
@@ -30,11 +37,19 @@ export default function Sidebar(props) {
       {/* Fetch image from server */}
       <div className={styles.profileCard}>
         <img src={profileImage} alt="Profile" />
-        <h1>{fullName}</h1>
+        <p>{fullName}</p>
       </div>
       <div className={styles.navigationItems}>
-        <h1>Dashboard</h1>
-        <h1>Photos</h1>
+        <div>
+          <Link className={styles.navigationLink} to="/">
+            Dashboard
+          </Link>
+        </div>
+        <div>
+          <Link className={styles.navigationLink} to="/photos">
+            Photos
+          </Link>
+        </div>
       </div>
     </div>
   );

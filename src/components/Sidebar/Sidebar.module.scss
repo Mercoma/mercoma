@@ -13,9 +13,18 @@
       height: 60px;
     }
 
-    h1 {
+    p {
       font-weight: bold;
       padding-left: 0.5rem;
+    }
+  }
+
+  .navigationItems {
+    margin-top: 25%;
+
+    .navigationLink {
+      color: white;
+      font-weight: 500;
     }
   }
 }

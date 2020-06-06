@@ -1,9 +1,9 @@
-.dashboard {
+.photos {
   display: grid;
   grid-template-columns: 240px 1fr;
   height: 100vh;
 
-  .dashboardContent {
+  .photosContent {
     padding: 1rem 1.5rem;
 
     h1 {
