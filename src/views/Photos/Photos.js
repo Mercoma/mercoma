@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { Sidebar } from "../../components/Sidebar";
+import { Sidebar, MobileSidebar } from "../../components/Sidebar";
 import { user1 } from "../../data/user1";
 import PhotoCard from "./PhotoCard";
 import PhotoModal from "./PhotoModal";
@@ -28,7 +28,8 @@ export default function Photos() {
         closeModal={handleCloseModal}
         isActive={isModalActive ? true : false}
       />
-      <Sidebar page="photos" />
+      <Sidebar className={styles.sidebar} page="photos" />
+      <MobileSidebar className={styles.mobileSidebar} />
       <section className={styles.photosContent}>
         <h1>Photos</h1>
         <div className={styles.photoGrid}>
