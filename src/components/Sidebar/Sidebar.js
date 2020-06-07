@@ -35,7 +35,7 @@ function Sidebar(props) {
   }
 
   function handleLogoutButtonClicked() {
-    // Call API for logout stuff
+    localStorage.removeItem("userId");
   }
 
   return (

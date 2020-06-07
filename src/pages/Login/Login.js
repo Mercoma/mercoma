@@ -36,8 +36,8 @@ function Login(props) {
 
     axios
       .post(`${BASE_URL}/users/signin`, data)
-      .then(() => {
-        // TODO: Add token to local storage and redirect to the dashboard
+      .then((res) => {
+        localStorage.setItem("userId", JSON.stringify(res.data.id));
         props.history.push("/dashboard");
       })
       .catch(() => {
