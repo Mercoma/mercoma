@@ -7,6 +7,12 @@
     font-size: 40px;
     font-weight: 500;
   }
+
+  .doctorList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 1rem 0;
+  }
 }
 
 @media (max-width: $mobile-breakpoint) {

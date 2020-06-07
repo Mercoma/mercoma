@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 
 import { MobileSidebar, Sidebar } from "../../components/Sidebar";
-import Base from '../../layout/Base';
+import { doctors } from "../../data/doctorsList";
+import DoctorCard from "./DoctorCard";
+import Base from "../../layout/Base";
 
 import styles from "./Doctors.module.scss";
 
 export default function Doctors() {
   useEffect(() => {
-    document.title = "Mercoma - Doctors"
+    document.title = "Mercoma - Doctors";
   }, []);
 
   return (
@@ -16,7 +18,11 @@ export default function Doctors() {
       <MobileSidebar />
       <section className={styles.doctorsContent}>
         <h1>Doctors</h1>
-        <button className="button is-primary">Button</button>
+        <div className={styles.doctorList}>
+          {doctors.map((doctor) => (
+            <DoctorCard doctor={doctor} />
+          ))}
+        </div>
       </section>
     </Base>
   );
