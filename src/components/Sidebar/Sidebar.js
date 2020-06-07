@@ -69,11 +69,13 @@ function Sidebar(props) {
       <div className={styles.navigationItems}>
         <div>
           <Link className={styles.navigationLink} to="/dashboard/doctors">
+            <i className="fas fa-user-md"></i>
             Doctors
           </Link>
         </div>
         <div>
           <Link className={styles.navigationLink} to="/dashboard/photos">
+            <i className="fas fa-camera"></i>
             Photos
           </Link>
         </div>

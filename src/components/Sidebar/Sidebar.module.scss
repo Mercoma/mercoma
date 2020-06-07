@@ -37,9 +37,18 @@
   .navigationItems {
     margin-top: 2rem;
 
+    div {
+      margin: 1rem 0;
+    }
+
     .navigationLink {
       color: white;
       font-weight: 500;
+      margin-left: 1.4rem;
+
+      svg {
+        margin-right: 0.5rem;
+      }
     }
   }
 }
