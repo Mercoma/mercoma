@@ -3,9 +3,10 @@ import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import { user1 } from "../../data/user1";
-import styles from "./Sidebar.module.scss";
 import { BASE_URL } from "../../constants";
+import profileImage from "../../assets/profile.jpeg";
+
+import styles from "./Sidebar.module.scss";
 
 function Sidebar(props) {
   const [avatar, setAvatar] = useState(null);
@@ -25,7 +26,7 @@ function Sidebar(props) {
       })
       .catch((err) => console.log(err));
 
-      setAvatar(user1.avatar);
+      setAvatar(profileImage);
     }
 
   function handleProfileCardClicked() {
