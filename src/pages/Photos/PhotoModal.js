@@ -1,7 +1,10 @@
 import PropTypes from "prop-types";
 import React, { useRef, useState } from "react";
+import FormData from "form-data";
+import axios from "axios";
 
 import styles from "./PhotoModal.module.scss";
+import { BASE_URL } from "../../constants";
 
 function PhotoModal(props) {
   const [isFileAdded, setIsFileAdded] = useState(false);
@@ -26,7 +29,32 @@ function PhotoModal(props) {
   }
 
   function handleFormSubmit(e) {
+    console.log("ree");
+    console.log(image);
     e.preventDefault();
+    let data = new FormData();
+    data.append("image", image);
+
+    console.log(data);
+
+    axios({
+      method: "POST",
+      url: `${BASE_URL}/images`,
+      data,
+      withCredentials: true,
+      headers: {
+        // accept: "application/json",
+        // "Accept-Language": "en-US,en;q=0.8",
+        "Content-Type": `multipart/form-data; boundary=${data._boundary}`,
+      },
+    })
+      .then((response) => {
+        console.log("success", response);
+      })
+      .catch((error) => {
+        console.log("fail", error);
+      });
+    console.log("after");
 
     // const files = imageInputRef.files;
   }

@@ -5,6 +5,8 @@ import { user1 } from "../../data/user1";
 import Base from "../../layout/Base/Base";
 import PhotoCard from "./PhotoCard";
 import PhotoModal from "./PhotoModal";
+import axios from "axios";
+import { BASE_URL } from "../../constants";
 
 import styles from "./Photos.module.scss";
 
@@ -13,6 +15,16 @@ export default function Photos() {
 
   useEffect(() => {
     document.title = "Mercoma - Photos";
+    axios
+      .get(`${BASE_URL}/images`, {
+        withCredentials: true,
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }, []);
 
   function handlePlacementCardClicked() {
