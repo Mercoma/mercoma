@@ -1,0 +1,38 @@
+@import "../../scss/shared";
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+
+  .backButton {
+    color: $ocean-blue;
+    margin: 1rem;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+  }
+
+  .profileContainer {
+    margin-top: 2rem;
+
+    .profileImage {
+      border-radius: 100px;
+      height: 200px;
+      width: 200px;
+    }
+  }
+
+  #logoutButton {
+    bottom: 6rem;
+  }
+}
+
+@media (max-width: $mobile-breakpoint) {
+  .backButton {
+    display: none;
+  }
+}
