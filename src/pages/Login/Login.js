@@ -40,7 +40,7 @@ function Login(props) {
       .then((res) => {
         // TODO: Add token to local storage and redirect to the dashboard
         console.log(res.data.id);
-        localStorage.setItem("auth", document.cookie);
+        localStorage.setItem("auth", res.data.id);
         props.history.push("/dashboard");
       })
       .catch(() => {

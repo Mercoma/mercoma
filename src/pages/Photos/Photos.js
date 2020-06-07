@@ -22,6 +22,7 @@ export default function Photos() {
       })
       .then((res) => {
         console.log(res);
+        setPhotos(res.data)
       })
       .catch((err) => {
         console.log(err);
@@ -59,8 +60,8 @@ export default function Photos() {
         <h1>Photos</h1>
         <div className={styles.photoGrid}>
           <PhotoCard isPlacementCard onClick={handlePlacementCardClicked} />
-          {photos.map((photo, index) => (
-            <PhotoCard key={index} photo={photo} />
+          {photos.map((photo) => (
+            <PhotoCard key={photo.id} photo={photo} />
           ))}
         </div>
       </section>

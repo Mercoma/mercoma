@@ -1,9 +1,11 @@
+import axios from 'axios';
 import PropTypes from "prop-types";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import { user1 } from "../../data/user1";
 import styles from "./Sidebar.module.scss";
+import { BASE_URL } from "../../constants";
 
 function Sidebar(props) {
   const [avatar, setAvatar] = useState(null);
@@ -15,19 +17,14 @@ function Sidebar(props) {
   });
 
   function configureComponent() {
-    // TODO: API call to be implemented later
-    setFullName(`${user1.firstName} ${user1.lastName}`);
-    setAvatar(user1.avatar);
-
-    // TODO: Add indicator of which page is selected
-    switch (props.page) {
-      case "dashboard":
-        break;
-      case "photos":
-        break;
-      default:
-        break;
-    }
+    // Send get request for the user information
+    axios.get(`${BASE_URL}/users`)
+      .then((res) => {
+        setFullName(`${res.data.firstname} ${res.data.lastname}`);
+        // TODO: Change the line below to the actual user's avatar when the backend is updated
+        setAvatar(user1.avatar);
+      })
+      .catch((err) => console.log(err));
   }
 
   function handleProfileCardClicked() {
