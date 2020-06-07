@@ -20,7 +20,7 @@ export default function Doctors() {
         <h1>Doctors</h1>
         <div className={styles.doctorList}>
           {doctors.map((doctor) => (
-            <DoctorCard doctor={doctor} />
+            <DoctorCard key={doctor.id} doctor={doctor} />
           ))}
         </div>
       </section>
