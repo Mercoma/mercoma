@@ -35,13 +35,14 @@ function Login(props) {
     };
 
     axios.defaults.withCredentials = true;
+
     axios
       .post(`${BASE_URL}/users/signin`, data)
       .then((res) => {
         // TODO: Add token to local storage and redirect to the dashboard
         console.log(res.data.id);
         localStorage.setItem("auth", res.data.id);
-        props.history.push("/dashboard");
+        props.history.push("/dashboard/doctors");
       })
       .catch(() => {
         setIsRequestErrorVisible(true);

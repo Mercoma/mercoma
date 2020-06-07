@@ -9,7 +9,7 @@ import { BASE_URL } from "../../constants";
 
 function Sidebar(props) {
   const [avatar, setAvatar] = useState(null);
-  const [fullName, setFullName] = useState("");
+  const [fullName, setFullName] = useState("Anonymous");
   const [isProfileMenuVisible, setIsProfileMenuVisible] = useState(false);
 
   useEffect(() => {
@@ -22,10 +22,11 @@ function Sidebar(props) {
       .then((res) => {
         setFullName(`${res.data.firstname} ${res.data.lastname}`);
         // TODO: Change the line below to the actual user's avatar when the backend is updated
-        setAvatar(user1.avatar);
       })
       .catch((err) => console.log(err));
-  }
+
+      setAvatar(user1.avatar);
+    }
 
   function handleProfileCardClicked() {
     setIsProfileMenuVisible(!isProfileMenuVisible);
@@ -67,8 +68,8 @@ function Sidebar(props) {
       </div>
       <div className={styles.navigationItems}>
         <div>
-          <Link className={styles.navigationLink} to="/dashboard">
-            Dashboard
+          <Link className={styles.navigationLink} to="/dashboard/doctors">
+            Doctors
           </Link>
         </div>
         <div>
@@ -86,7 +87,7 @@ Sidebar.propTypes = {
 };
 
 Sidebar.defaultProps = {
-  page: "dashboard",
+  page: "doctors",
 };
 
 export default Sidebar;

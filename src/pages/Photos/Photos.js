@@ -51,8 +51,8 @@ export default function Photos() {
       <MobileSidebar />
       <section className={styles.photosContent}>
         {isRequestErrorVisible && (
-          <div class="notification is-danger is-active">
-            <button class="delete" onClick={hideErrorStatusMessages}></button>
+          <div className="notification is-danger is-active">
+            <button className="delete" onClick={hideErrorStatusMessages}></button>
             Error! A problem occurred when retrieving your images from the
             server. Try again later.
           </div>

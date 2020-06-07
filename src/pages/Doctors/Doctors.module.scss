@@ -1,6 +1,6 @@
 @import "../../scss/shared";
 
-.dashboardContent {
+.doctorsContent {
   padding: 1rem 1.5rem;
 
   h1 {
@@ -10,7 +10,7 @@
 }
 
 @media (max-width: $mobile-breakpoint) {
-  .dashboardContent {
+  .doctorsContent {
     // Accommodates the tab bar on mobile devices
     padding-bottom: 6.2rem;
   }

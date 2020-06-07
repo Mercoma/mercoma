@@ -3,19 +3,19 @@ import React, { useEffect } from "react";
 import { MobileSidebar, Sidebar } from "../../components/Sidebar";
 import Base from '../../layout/Base';
 
-import styles from "./Dashboard.module.scss";
+import styles from "./Doctors.module.scss";
 
-export default function Dashboard() {
+export default function Doctors() {
   useEffect(() => {
-    document.title = "Mercoma - Dashboard"
+    document.title = "Mercoma - Doctors"
   }, []);
 
   return (
     <Base>
-      <Sidebar page="dashboard" />
+      <Sidebar page="doctors" />
       <MobileSidebar />
-      <section className={styles.dashboardContent}>
-        <h1>Dashboard</h1>
+      <section className={styles.doctorsContent}>
+        <h1>Doctors</h1>
         <button className="button is-primary">Button</button>
       </section>
     </Base>

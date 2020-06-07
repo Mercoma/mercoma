@@ -60,7 +60,6 @@ function SignUp(props) {
       axios
         .post(`${BASE_URL}/users/signup`, data)
         .then((res) => {
-          // TODO: Decide to navigate to login or dashboard (auth token needed)
           props.history.push("/login");
         })
         .catch(() => {
@@ -132,14 +131,14 @@ function SignUp(props) {
         </form>
         {/* Status messages */}
         {isPasswordErrorVisible && (
-          <div class={`notification is-danger ${styles.statusMessage}`}>
-            <button class="delete" onClick={hideErrorStatusMessages}></button>
+          <div className={`notification is-danger ${styles.statusMessage}`}>
+            <button className="delete" onClick={hideErrorStatusMessages}></button>
             Error! The passwords do no match.
           </div>
         )}
         {isRequestErrorVisible && (
-          <div class={`notification is-danger ${styles.statusMessage}`}>
-            <button class="delete" onClick={hideErrorStatusMessages}></button>
+          <div className={`notification is-danger ${styles.statusMessage}`}>
+            <button className="delete" onClick={hideErrorStatusMessages}></button>
             An error was encountered! Please try again.
           </div>
         )}

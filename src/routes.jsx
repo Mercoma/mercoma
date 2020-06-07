@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./pages/Home";
-import Dashboard from "./pages/Dashboard";
+import Doctors from "./pages/Doctors";
 import Login from "./pages/Login";
 import NotFound from "./pages/NotFound";
 import Photos from "./pages/Photos";
@@ -19,7 +19,7 @@ export default function AppRouter() {
         <Route path="/signUp" component={SignUp} />
         <PrivateRoute path="/dashboard/photos" component={Photos} />
         <PrivateRoute path="/dashboard/profile" component={Profile} />
-        <PrivateRoute path="/dashboard" component={Dashboard} />
+        <PrivateRoute path="/dashboard/doctors" component={Doctors} />
         <PrivateRoute component={NotFound} />
       </Switch>
     </Router>
