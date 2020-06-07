@@ -78,7 +78,7 @@ function SignUp(props) {
       </Link>
       <div className={styles.container}>
         <form className={styles.formContainer} onSubmit={handleFormSubmission}>
-          <h1>What's your email?</h1>
+          <h1>Create an account.</h1>
           <p>
             Welcome to Mercoma. Connect with doctors and identify possible
             tumors with a snapshot.
