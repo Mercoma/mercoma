@@ -1,0 +1,39 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: #02b0c8;
+  background-image: url("./unknown.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  background-blend-mode: multiply;
+  color: white;
+  .content {
+    max-width: 400px;
+    text-align: right;
+    font-size: 1.5rem;
+    h1 {
+      font-size: 3em;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 1em;
+      margin-bottom: 3rem;
+    }
+    a {
+      padding: 1rem 2rem;
+      background-color: #02b0c8;
+      border-radius: 5rem;
+      color: inherit;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    @media (max-width: 600px) {
+      font-size: 1rem;
+    }
+  }
+}
