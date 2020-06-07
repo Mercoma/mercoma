@@ -50,7 +50,9 @@ function Login(props) {
 
   return (
     <div className={styles.login}>
-      <h1>Mercoma</h1>
+      <Link className={styles.title} to="/">
+        <h1>Mercoma</h1>
+      </Link>
       <div className={styles.container}>
         <form className={styles.formContainer} onSubmit={handleFormSubmission}>
           <h2>Welcome Back</h2>
