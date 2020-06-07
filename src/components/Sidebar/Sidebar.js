@@ -8,6 +8,7 @@ import styles from "./Sidebar.module.scss";
 function Sidebar(props) {
   const [avatar, setAvatar] = useState(null);
   const [fullName, setFullName] = useState("");
+  const [isProfileMenuVisible, setIsProfileMenuVisible] = useState(false);
 
   useEffect(() => {
     configureComponent();
@@ -29,11 +30,43 @@ function Sidebar(props) {
     }
   }
 
+  function handleProfileCardClicked() {
+    setIsProfileMenuVisible(!isProfileMenuVisible);
+  }
+
+  function handleLogoutButtonClicked() {
+    // Call API for logout stuff
+  }
+
   return (
     <div className={styles.sidebar}>
-      <div className={styles.profileCard}>
-        <img src={avatar} alt="Avatar" />
-        <p>{fullName}</p>
+      <div className={`dropdown ${isProfileMenuVisible && "is-active"}`}>
+        <div className="dropdown-trigger">
+          <div
+            className={styles.profileCard}
+            onClick={handleProfileCardClicked}
+          >
+            <img src={avatar} alt="Avatar" />
+            <p>{fullName}</p>
+          </div>
+        </div>
+        <div className="dropdown-menu" id="dropdown-menu" role="menu">
+          <div className="dropdown-content">
+            <Link to="/dashboard/profile" className="dropdown-item">
+              Profile
+            </Link>
+            <hr className="dropdown-divider" />
+            <Link to="/login">
+              <button
+                id={styles.logoutButton}
+                className="dropdown-item"
+                onClick={handleLogoutButtonClicked}
+              >
+                Logout
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
       <div className={styles.navigationItems}>
         <div>

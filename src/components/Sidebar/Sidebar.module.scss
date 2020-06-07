@@ -19,10 +19,23 @@
       font-weight: bold;
       padding-left: 0.5rem;
     }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  #logoutButton {
+    border: none;
+    outline: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   .navigationItems {
-    margin-top: 20%;
+    margin-top: 2rem;
 
     .navigationLink {
       color: white;
